@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:imdbx/screens/gridview.dart';
 
 class Tittle extends StatelessWidget {
+  final List movielist;
   final String tittle;
   final FontWeight fontWeight;
   final double fontsize;
@@ -11,7 +13,8 @@ class Tittle extends StatelessWidget {
       required this.tittle,
       required this.fontWeight,
       required this.fontsize,
-      required this.color});
+      required this.color,
+      required this.movielist});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,10 @@ class Tittle extends StatelessWidget {
             style: TextStyle(
                 color: color, fontSize: fontsize, fontWeight: fontWeight)),
         trailing: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: ((context) => GridViews(movielist: movielist))));
+            },
             icon: const Icon(
               CupertinoIcons.right_chevron,
               size: 18,

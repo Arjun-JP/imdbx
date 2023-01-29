@@ -160,11 +160,12 @@ class MovieDetails extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Tittle(
+                        Tittle(
+                            movielist: moviedetails,
                             tittle: 'Overview',
                             fontWeight: FontWeight.bold,
                             fontsize: 20,
-                            color: Color.fromARGB(255, 255, 255, 255)),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                         Text(
                           (moviedetails[index]['overview']).toString().isEmpty
                               ? 'Not avilable'

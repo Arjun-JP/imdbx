@@ -102,11 +102,11 @@ class _HomeState extends State<Home> {
               SizedBox(
                   height: 450,
                   child: TrendingMovies(movielist: trendingmovies)),
-              const Tittle(
+               Tittle(movielist:trendingmovies ,
                   tittle: 'Upcoming Movies',
                   fontWeight: FontWeight.w500,
                   fontsize: 20,
-                  color: Color.fromARGB(255, 255, 255, 255)),
+                  color: const Color.fromARGB(255, 255, 255, 255)),
               SizedBox(
                 height: 150,
                 child: MovieListView(
@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
                   image: 'poster_path',
                 ),
               ),
-              const Tittle(
+               Tittle(movielist: popularmovies,
                   tittle: 'Popular movies',
                   fontWeight: FontWeight.w500,
                   fontsize: 20,
@@ -123,7 +123,7 @@ class _HomeState extends State<Home> {
                   height: 150,
                   child: MovieListView(
                       movielist: popularmovies, image: 'poster_path')),
-              const Tittle(
+               Tittle( movielist: topratedmovies,
                   tittle: 'Toprated movies',
                   fontWeight: FontWeight.w500,
                   fontsize: 20,
@@ -132,7 +132,7 @@ class _HomeState extends State<Home> {
                   height: 150,
                   child: MovieListView(
                       movielist: topratedmovies, image: 'poster_path')),
-              const Tittle(
+               Tittle(movielist:populartvhows ,
                   tittle: 'Polular Tv Shows',
                   fontWeight: FontWeight.w500,
                   fontsize: 20,
@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                   height: 150,
                   child: MovieListView(
                       movielist: populartvhows, image: 'poster_path')),
-              const Tittle(
+               Tittle(movielist: actors,
                   tittle: 'Populer People',
                   fontWeight: FontWeight.w500,
                   fontsize: 20,

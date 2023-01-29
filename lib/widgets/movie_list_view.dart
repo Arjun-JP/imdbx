@@ -43,7 +43,7 @@ class MovieListView extends StatelessWidget {
                       ],
                     ),
                     onTap: () {
-                      print(movielist);
+                    
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: ((context) => MovieDetails(
                                 moviedetails: movielist,
